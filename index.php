@@ -22,11 +22,9 @@
 </head>
 <body>
 
-<nav>
-    
-</nav>
+<?php include'mvc/nav.php'; ?>
     <h1>Articles</h1>
-        
+
     <?php 
     foreach($articles as $article):?>
     <div class = "entetetitre">

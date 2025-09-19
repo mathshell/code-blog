@@ -173,3 +173,201 @@ a {
 .intitle:hover {
     box-shadow: 0px 8px 20px rgba(0,0,0,0.3);
 }
+
+/*****************CSS DU FORMULAIRE*****************************/
+/* From Uiverse.io by KhelVers */ 
+#Container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+}
+
+#rays {
+  z-index: 2;
+  position: relative;
+  bottom: -1.5em;
+  animation: rays 2s ease-in-out infinite;
+}
+
+.form {
+  position: relative;
+  top: 5em;
+  padding: 4%;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.5rem;
+  border: 4px solid #fff;
+  background: rgba(0, 255, 240, 0.52);
+  box-shadow: 0px 0px 64px 0px #82e1ff inset, 0px 0px 16px #a8fffaa6;
+  backdrop-filter: blur(3.5px);
+  gap: 1em;
+  animation: float 2s ease-in-out infinite;
+}
+
+#login-lable {
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 8px;
+  text-shadow: 0px 0px 16px rgb(1, 34, 28);
+}
+
+.form-content {
+  height: 3em;
+  padding: 1px 8px;
+  color: white;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-weight: bold;
+  border-radius: 6px;
+  border: 2px solid #fff;
+  background: rgba(139, 255, 247, 0.486);
+  box-shadow: 0px 0px 1px 3px #9ee5e3 inset, 0px 4px 4px 0px #181a6040;
+  text-shadow: 0px 1px 4px rgb(243, 243, 243);
+}
+
+.form-content:focus-visible {
+  outline: none;
+  text-decoration: none;
+  background: rgba(139, 189, 255, 0.59);
+  box-shadow: 0px 0px 1px 4px #9ee5e3;
+}
+
+.form-content:hover {
+  background: rgba(139, 189, 255, 0.59);
+}
+
+::placeholder {
+  font-weight: 300;
+  color: rgb(1, 33, 39);
+  letter-spacing: 0.2   rem;
+  text-decoration: solid;
+  font-size: 0.9rem;
+  font-family: 'Times New Roman', Times, serif;
+  text-shadow: 0px 1px 5px rgb(0, 0, 0);
+}
+
+.form button {
+  cursor: pointer;
+  height: 3.5rem;
+  padding: 0%;
+  color: white;
+  font-size: 1.5em;
+  letter-spacing: 0.3rem;
+  border: 2px solid white;
+  background: linear-gradient(144deg, #9c11ffce, #2000eeb6 50%, #15efffbb);
+}
+
+.form button:hover {
+  position: relative;
+  bottom: 4px;
+  background: linear-gradient(144deg, #9c11ff, #2000ee 50%, #15fff3);
+  box-shadow: 0px 0px 2px 2px #ffffff;
+}
+
+@keyframes float {
+  0% {
+    position: relative;
+  }
+
+  50% {
+    top: 50px;
+  }
+
+  100% {
+    position: relative;
+  }
+}
+
+@keyframes rays {
+  0% {
+    opacity: 0.6;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.6;
+  }
+}
+ /*********************STYLE POUR LE PETIT NAV DANS LE MVC*/
+ /* From Uiverse.io by SoloResearchLab */ 
+.button-group {
+  display: flex;
+  background-color: white;
+  padding: 15px; /* 1.25rem assuming base font size is 12px */
+  box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0px 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border-radius: 10px;
+}
+
+.button-container {
+  display: flex;
+  width: 100%;
+  padding: 15px; /* 1.5rem */
+  border-radius: 10px;
+}
+
+.button-container a {
+  color: #3b82f6; /* light-blue-light */
+  border: 2px solid transparent;
+  display: inline-flex;
+  align-items: center;
+  margin-right: 20px; /* 4 * 5 (assuming 1 unit = 5px) */
+  padding: 10px; /* 2.5 * 4 */
+  background-color: #f3f4f6; /* light-secondary */
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+  border-radius: 9999px;
+  font-size: 14px;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.button-container a:last-child {
+  margin-right: 0;
+}
+
+.button-container a:hover {
+  color: black;
+  border-color: #3b82f6; /* light-blue-light */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.button-container a svg {
+  width: 20px; /* 5 * 4 */
+  height: 20px;
+  fill: currentColor;
+}
+
+/* Dark Mode Styles */
+@media (prefers-color-scheme: dark) {
+  .button-group {
+    background-color: #1f2937; /* box-dark */
+    box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.5),
+      0px 2px 4px -1px rgba(0, 0, 0, 0.3);
+  }
+
+  .button-container {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  .button-container a {
+    color: #9ca3af; /* gray-400 */
+    background-color: #374151; /* button-curved-default-dark */
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.06);
+  }
+
+  .button-container a:hover,
+  .button-container a:focus,
+  .button-container a:active {
+    background-color: #4b5563; /* button-curved-pressed-dark */
+    box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.1),
+      0px 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+}

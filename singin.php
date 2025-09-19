@@ -31,9 +31,7 @@ if (!empty($_POST)) {
     <title>Inscription</title>
 </head>
 <body>
-    <button>
-        <a href="index.php" type="button"> acceuille.</a>
-    </button>
+    <?php include 'mvc/nav.php'; ?>
     
     <form action="singin.php" method="post">
         <fieldset>

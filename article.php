@@ -58,6 +58,7 @@ if (isset($_GET['success']) && $_GET['success'] == 1) {
     <title><?= htmlspecialchars($article->title) ?></title>
 </head>
 <body>
+    <?php include 'mvc/nav.php'; ?>
     <section class="article">
         <div class="entetearticle">
             <h1><?= htmlspecialchars($article->title) ?></h1>
