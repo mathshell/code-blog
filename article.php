@@ -54,20 +54,21 @@ if (isset($_GET['success']) && $_GET['success'] == 1) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap-5.3.7/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <title><?= htmlspecialchars($article->title) ?></title>
 </head>
 <body>
     <?php include 'mvc/nav.php'; ?>
-    <section class="article">
+    <section class="container-lg sm-xl article">
         <div class="entetearticle">
             <h1><?= htmlspecialchars($article->title) ?></h1>
             <p><?= htmlspecialchars($article->date) ?></p>
         </div>
         <p class="news"><?= nl2br(htmlspecialchars($article->content)) ?></p>
     </section>
-
-    <section class="navigation">
+    <div class="container-xl sm-3 md-4 lg-6">
+        <section class="navigation">
         <div class = "oders"> <h3>Articles récents</h3></div> 
         <div>
             <?php foreach ($articles as $articl): ?>
@@ -78,6 +79,7 @@ if (isset($_GET['success']) && $_GET['success'] == 1) {
             <?php endforeach; ?>
         </div> 
     </section>
+    </div>
 
     <section class="comments-section">
         <?php if ($success): ?>
@@ -122,5 +124,7 @@ if (isset($_GET['success']) && $_GET['success'] == 1) {
         <br>
         <a href="index.php">Accueil</a>
     </section>
+   
+    <script src="bootstrap-5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
